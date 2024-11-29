@@ -1,35 +1,8 @@
-const express = require("express")
 const axios = require("axios");
-const { Health: HealthModel } = require("./models/Health");
-const fetchAndSaveHealthRecords = require("./db/saveRecords")
-const app = express()
+const express = require("express");
 
-app.use(express.json())
+const { Health: HealthModel } = require("../models/Health")
 
-//Conexão DB
-
-const conn = require("./db/conn")
-
-conn();
-
-
-
-//Rotas
-
-const routes = require ("./routes/router")
-
-app.use("/api", routes)
-
-
-app.listen (4000,function(){
-  console.log("Servidor 4000 Online!")
-})
-
-fetchAndSaveHealthRecords();
-
-
-
-/*
 // Função para buscar e salvar dados no MongoDB
 const fetchAndSaveHealthRecords = async () => {
   try {
@@ -64,5 +37,6 @@ const fetchAndSaveHealthRecords = async () => {
 const intervalTime = 1 * 60 * 1000;
 
 // Executa imediatamente e depois a cada 5 minutos
-fetchAndSaveHealthRecords();
-setInterval(fetchAndSaveHealthRecords, intervalTime);*/
+setInterval(fetchAndSaveHealthRecords, intervalTime);
+
+module.exports = fetchAndSaveHealthRecords;

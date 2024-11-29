@@ -1,14 +1,11 @@
 const router = require("express").Router();
 
-const healthController = require("../controllers/healthController");
 const stepsController = require("../controllers/stepsController");
 
 //Rotas de serviço de saúde
 
 
-const healthRouter = require("./routesHealth");
 
-router.use("/", healthRouter);
 
 //Rotas de serviço de caminhada
 

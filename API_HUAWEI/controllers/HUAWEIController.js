@@ -13,30 +13,6 @@ const HUAWEIController = {
       return res.status(400).json({ error: "Cabeçalhos ausentes" });
     }
 
-    const responseBody = {
-      healthRecords: [
-        {
-          startTime: 1609293600000000000,
-          endTime: 1609380000000000000,
-          dataTypeName: "com.huawei.continuous.ecg_record",
-          value: [
-            { fieldName: "ecg_type", integerValue: 1 },
-            { fieldName: "avg_heart_rate", floatValue: 75.0 },
-          ],
-          id: "some_id_value",
-          subDataRelation: [
-            {
-              startTime: 1609293600000000000,
-              endTime: 1609380000000000000,
-              dataTypeName: "com.huawei.continuous.ecg_detail",
-              dataCollectorId: "some_collector_id",
-            },
-          ],
-        },
-      ],
-    };
-
-    res.status(200).json(responseBody);
   },
   
 };
