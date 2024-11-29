@@ -1,0 +1,52 @@
+
+
+GET http://localhost:3000/api/routesHealth/
+
+###
+GET http://localhost:3000/api/routesHealth/67312126a894e345ed26ff1e
+
+###
+GET http://localhost:3000/api/routesHealth/spo2
+
+###
+GET http://localhost:3000/api/routesHealth/calorias
+
+###
+GET http://localhost:3000/api/routesHealth/distancia
+
+###
+GET http://localhost:3000/api/routesHealth/fc
+
+###
+GET http://localhost:3000/api/routesHealth/passos
+
+
+###
+GET http://localhost:3000/api/routesHealth/caloriasAtivas
+
+###
+GET http://localhost:3000/api/routesHealth/intensidadeAtividade
+
+###
+GET http://localhost:3000/api/routesHealth/metaPassos
+
+###
+GET http://localhost:3000/api/routesHealth/metaGastoCalorico
+
+###
+GET http://localhost:3000/api/routesHealth/metaHorasAtivas
+
+
+###
+GET http://localhost:3000/api/routesHealth/metaTempoExercicio
+
+
+###
+GET http://localhost:3000/api/routesHealth/tempoExercicio
+
+###
+GET http://localhost:3000/api/routesHealth/estadoSono
+
+
+###
+GET http://localhost:3000/api/routesHealth/pontuacaoEstresse
