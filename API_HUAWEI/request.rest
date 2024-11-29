@@ -1,0 +1,94 @@
+POST http://localhost:3030/api/routesHealth/
+Content-Type: application/json
+
+{
+    "healthRecords": [{
+    "startTime": 1609293600000000000,
+    "endTime": 1609380000000000000,
+    "dataTypeName": "com.huawei.continuous.ecg_record",
+    "value": [{
+        "fieldName": "ecg_type",
+        "integerValue": 1
+    },
+    {
+        "fieldName": "avg_heart_rate",
+        "floatValue": 75
+    },
+    {
+        "fieldName": "ecg_arrhythmia_type",
+        "integerValue": 0
+    },
+    {
+        "fieldName": "user_symptom",
+        "integerValue": 0
+    },
+    {
+        "fieldName": "sampling_frequency",
+        "integerValue": 0
+    },
+    {
+        "fieldName": "ecg_algorithm_version",
+        "stringValue": "1.0"
+    }],
+    "id": "cmF3OmNvbS5odWF3ZWkuY29udGludW91cy5lY2dfcmVjb3JkOjMwMDAxMzEwMzpodWF3ZWk6bXA6MTIzNDU2Nzg5MC0xNjA5MzgwMDAwMDAwMDAwMDAw",
+    "subDataRelation": [{
+        "startTime": 1609293600000000000,
+        "endTime": 1609380000000000000,
+        "dataTypeName": "com.huawei.continuous.ecg_detail",
+        "dataCollectorId": "cmF3OmNvbnRpbnVvdXMuZWNnX2RldGFpbAEwMTI3ODUwMTpqEF7rB3uBcGykpv6T2TisfTMhfZAvz1BP2Kcz70d1Sg"
+    }]
+    }]
+}
+
+###
+POST http://localhost:3030/api/routesSteps
+Content-Type: application/json
+
+{
+  
+    "group": [
+        {
+            "startTime": 1597075200000,
+            "endTime": 1597161600000,
+            "sampleSet": [
+                {
+                    "dataCollectorId": "ZGVyaXZlZDpjb250aW51b3VzLnN0ZXBzLnRvdGFsEwMTI3ODUwMTpqEF7rB3uBcGykpv6T2TisfTMhfZAvz1BP2Kcz70d1Sg",
+                    "samplePoints": [
+                        {
+                            "startTime": 1597075200000000000,
+                            "endTime": 1597161599999000000,
+                            "dataTypeName": "com.huawei.continuous.steps.total",
+                            "originalDataCollectorId": "cmF3OmNjb250aW51b3VzLnN0ZXBzLmRlbHRhEwMTI3ODUwMTpqEF7rB3uBcGykpv6T2TisfTMhfZAvz1BP2Kcz70d1Sg",
+                            "value": [
+                                {
+                                    "fieldName": "steps",
+                                    "integerValue": 9000
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "startTime": 1597161600000,
+            "endTime": 1597247999999,
+            "sampleSet": [
+                {
+                    "dataCollectorId": "ZGVyaXZlZDpjb250aW51b3VzLnN0ZXBzLnRvdGFsEwMTI3ODUwMTpqEF7rB3uBcGykpv6T2TisfTMhfZAvz1BP2Kcz70d1Sg",
+                    "samplePoints": []
+                }
+            ]
+        }
+    ]
+
+}
+
+
+###### 
+GET http://localhost:4000/api/healthkit/v2/dataCollectors/healthRecords
+Content-Type: application/json
+Authorization: teste
+x-client-id: 58
+x-version: 1
+x-caller-trace-id: 123
