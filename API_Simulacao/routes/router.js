@@ -4,7 +4,7 @@ const router = require("express").Router();
 
 const recordsController = require("../controllers/healthRecordsController");
 
-const recordsRouter =require("./recordsRouter")
+const recordsRouter =require("./routesRecord")
 
 router.use("/", recordsRouter);
 
